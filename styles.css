@@ -1,0 +1,169 @@
+/* Import normalize.css to ensure cross-browser consistency */
+@import url("https://necolas.github.io/normalize.css/8.0.1/normalize.css");
+
+/* CSS Variables for theme customization */
+:root {
+  --primary-color: #007bff;
+  --secondary-color: #0056b3;
+  --font-size-base: 1rem; /* Base font size */
+  --font-size-large: 1.2rem; /* Larger font size */
+  --background-color: #f4f4f9;
+  --text-color: #333;
+  --border-color: #ddd;
+  --border-radius: 0.25rem; /* 4px */
+  --padding-base: 1.25rem; /* 20px */
+  --margin-base: 1.25rem; /* 20px */
+  --max-width: 50rem; /* 800px */
+}
+
+/* Universal box-sizing and reset margins/paddings */
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+/* Class for visually hiding elements (for screen readers) */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+/* Base font size and smooth scroll behavior */
+html {
+  font-size: 100%;
+  scroll-behavior: smooth;
+}
+
+/* Body styling */
+body {
+  font-family: Arial, sans-serif;
+  background-color: var(--background-color);
+  padding: var(--padding-base);
+  color: var(--text-color);
+}
+
+/* Header styling */
+header {
+  margin-bottom: var(--margin-base);
+}
+
+header h1 {
+  font-size: 2rem;
+  margin-bottom: var(--margin-base);
+}
+
+/* Main section styling */
+main {
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+/* Form styling */
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: var(--margin-base);
+}
+
+form label {
+  font-size: var(--font-size-large);
+  margin-bottom: 0.625rem; /* 10px = 0.625rem */
+  color: var(--text-color);
+}
+
+form input[type="url"] {
+  padding: 0.625rem; /* 10px = 0.625rem */
+  font-size: var(--font-size-base);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  width: 100%;
+  max-width: 18.75rem; /* 300px = 18.75rem */
+  margin-bottom: 0.625rem; /* 10px = 0.625rem */
+}
+
+form button {
+  padding: 0.625rem 1.25rem; /* 10px 20px = 0.625rem 1.25rem */
+  font-size: var(--font-size-base);
+  background-color: var(--primary-color);
+  color: #fff;
+  border: none;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: var(--secondary-color);
+}
+
+/* Feed entries styling */
+#feed-entries {
+  padding: 0;
+  list-style-type: none; /* Hides the bullet points */
+}
+
+#feed-entries li {
+  background-color: #fff;
+  padding: 0.9375rem; /* 15px = 0.9375rem */
+  margin-bottom: 0.625rem; /* 10px = 0.625rem */
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+}
+
+#feed-entries li a {
+  font-size: var(--font-size-large);
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+#feed-entries li a:hover {
+  text-decoration: underline;
+}
+
+#feed-entries li small {
+  display: block;
+  margin-top: 0.3125rem; /* 5px = 0.3125rem */
+  color: #666;
+}
+
+#feed-entries li p {
+  margin-top: 0.625rem; /* 10px = 0.625rem */
+  color: var(--text-color);
+}
+
+/* Footer styling */
+footer {
+  margin-top: var(--margin-base);
+  text-align: center;
+  font-size: 0.875rem;
+  color: #666;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 48rem) {
+  /* 768px = 48rem */
+  form {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  form input[type="url"] {
+    width: 100%;
+    margin-bottom: 0.625rem; /* 10px = 0.625rem */
+  }
+
+  form button {
+    width: 100%;
+  }
+}
